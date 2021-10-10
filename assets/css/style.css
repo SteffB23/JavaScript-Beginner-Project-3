@@ -16,8 +16,7 @@ body {
         
     );
 }
-.container {
-    border: 2px solid white;
+.container {   
     width: 40%;
     min-width: 450px;
     position:absolute;
@@ -51,7 +50,7 @@ body {
 
 #newtask input:focus{
     outline: none;
-    border-color: darkgoldenrod;
+    border-color: #00d7c7;
 }
 
 #newtask button {
@@ -64,8 +63,8 @@ body {
     font-size: 15px;
     border: none;
     font-family: 'Ubuntu', sans-serif;
-    background-color: #000000;
-    color: crimson;
+    background-color: #282c34;
+    color: #00d7c7;
     cursor: pointer;
 }
 
@@ -87,7 +86,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 2px solid crimson;
+    border-bottom: 2px solid #282c34;
     cursor: pointer;
 }
 
@@ -98,8 +97,8 @@ body {
 }
 
 .task button {
-    background-color: slateblue;
-    color: #ffffff;
+    background-color: #282c34;
+    color: #00d7c7;
     height: 100%;
     width: 40px;
     border-radius: 5px;
@@ -110,5 +109,6 @@ body {
 
 .completed {
     text-decoration: line-through;
+    color: #00d7c7;
 }   
 
