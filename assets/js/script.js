@@ -23,5 +23,12 @@ document.querySelector('#push').onclick = function() {
                 this.parentNode.remove();
             }
         }
+//Crossing out a completed
+        var tasks = document.querySelectorAll(".tasks");
+        for(var i=0; i<tasks.length; i++) {
+            tasks[i].onclick = function() {
+                this.classList.toggle('completed');
+            }
+        }
     }
 }
