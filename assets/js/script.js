@@ -21,14 +21,18 @@ document.querySelector('#push').onclick = function() {
         for(var i=0; i<current_tasks.length; i++){
             current_tasks[i].onclick = function() {
                 this.parentNode.remove();
+                console.log("item removed");
             }
         }
 //Crossing out a completed
-        var tasks = document.querySelectorAll(".tasks");
+        var tasks = document.querySelectorAll(".task");
         for(var i=0; i<tasks.length; i++) {
             tasks[i].onclick = function() {
                 this.classList.toggle('completed');
+                console.log("crossed out");
             }
         }
+//Clearing input field after each entry:    
+        document.querySelector('#newtask input').value = "";
     }
 }
