@@ -1,7 +1,9 @@
+//Validate input field:
 document.querySelector('#push').onclick = function() {
     if(document.querySelector('#newtask input').value.length == 0) {
         console.log("Please enter a value")
     }
+//Adding a new task:
     else {
         document.querySelector('#tasks').innerHTML += `
             <div class="task">
@@ -9,10 +11,17 @@ document.querySelector('#push').onclick = function() {
                     ${document.querySelector('#newtask input').value}
                 </span>
                 <button class="delete">
-                <i class="far fa-trash-alt"></i>
+                <i class="far fa-trash-alt"> X </i>
                 </button>
             
             </div>
         `;
+//Deleting a task:
+        var current_tasks = document.querySelectorAll(".delete");
+        for(var i=0; i<current_tasks.length; i++){
+            current_tasks[i].onclick = function() {
+                this.parentNode.remove();
+            }
+        }
     }
 }
